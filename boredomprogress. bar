@@ -1,0 +1,12 @@
+extends ProgressBar
+
+@export var boredom_increase_rate: float = 5.0
+var target_value: float = 0.0
+
+func _process(delta: float) -> void:
+	target_value += boredom_increase_rate * delta
+	target_value = clamp(target_value, min_value, max_value)
+	
+	# Smoothly animate to the new target value
+	var tween = create_tween()
+	tween.tween_property(self, "value", target_value, 0.2)
