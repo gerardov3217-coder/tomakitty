@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://fv3q4gnb5wdg" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://3sdcsj5qit57" path="res://scenes/game.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://ckdwbel6dfyv3" path="res://scenes/time.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://cyy13ax3c73ck" path="res://scripts/progressbar.gd" id="4_jyhfs"]
 
 [node name="Main" type="Node" unique_id=1000122704]
 script = ExtResource("1_0wfyh")
@@ -27,3 +28,12 @@ offset_top = 2.0
 offset_right = 0.0
 offset_bottom = 2.0
 grow_vertical = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="GUI" unique_id=2046773545]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 48.0
+offset_right = 34.0
+offset_bottom = 53.0
+show_percentage = false
+script = ExtResource("4_jyhfs")
